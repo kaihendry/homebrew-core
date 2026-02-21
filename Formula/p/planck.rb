@@ -34,10 +34,10 @@ class Planck < Formula
 
   uses_from_macos "vim" => :build # for xxd
   uses_from_macos "curl"
-  uses_from_macos "zlib"
 
   on_linux do
     depends_on "webkitgtk"
+    depends_on "zlib-ng-compat"
   end
 
   # Don't mix our ICU4C headers with the system `libicucore`.
