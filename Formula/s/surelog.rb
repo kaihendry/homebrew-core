@@ -26,7 +26,9 @@ class Surelog < Formula
   depends_on "capnp"
   depends_on "uhdm"
 
-  uses_from_macos "zlib"
+  on_linux do
+    depends_on "zlib-ng-compat"
+  end
 
   conflicts_with "open-babel", because: "both install `roundtrip` binaries"
 
